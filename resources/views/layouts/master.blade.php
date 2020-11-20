@@ -11,14 +11,14 @@
 	<body>
 		<header class="header">
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <a class="navbar-brand" href="#">Mkstest</a>
+                <a class="navbar-brand" href="/">Mkstest</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                   <div class="navbar-nav">
-                    <a class="nav-item nav-link active" href="/">home <span class="sr-only">(current)</span></a>
-                    <a class="nav-item nav-link" href="/articles">articles</a>
+                    <a class="nav-item nav-link {{ Request::is('/')  ? 'active' : ''  }}" href="/">home</a>
+                    <a class="nav-item nav-link {{ Request::is('articles*')  ? 'active' : ''  }}" href="/articles">articles</a>
                   </div>
                 </div>
               </nav>
@@ -27,7 +27,7 @@
 
 		@yield('content')
 
-		<footer class="footer">
+		<footer class="footer p-5">
 
 		</footer>
 

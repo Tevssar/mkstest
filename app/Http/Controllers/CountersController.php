@@ -24,7 +24,7 @@ class CountersController extends Controller
 
         }
 
-        return $likes;
+        return response()->json($likes);
     }
 
     public function incrementViev(Request $request)
@@ -43,6 +43,6 @@ class CountersController extends Controller
 
 
 
-        return $views;
+        return response()->json($views);
     }
 }

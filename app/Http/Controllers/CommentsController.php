@@ -9,10 +9,6 @@ use App\Http\Requests\CommentForm;
 
 class CommentsController extends Controller
 {
-    public function index()
-    {
-        //
-    }
 
     public function store(CommentForm $request)
     {
@@ -20,5 +16,7 @@ class CommentsController extends Controller
             sleep(10);
         }
         Comments::create($request->all());
+
+        return  response()->json([], 200);
     }
 }

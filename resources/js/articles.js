@@ -22,10 +22,15 @@ $('form[name="comment"]').submit(function(e) {
         console.log(response);
     })
     .catch((jqXHR, textStatus) => {
+        $(".alert-danger").empty();
         $(this).parent().removeClass('disabled');
         $(this).find(":input").prop("disabled", false);
+        $.each(jqXHR.responseJSON.errors, function(i, item) {
+            $(".alert-danger").append(item + '</br>');
+        });
+
         $(".alert-danger").slideDown(400).removeClass('hide');
-        console.log("err:", jqXHR, textStatus);
+        console.log(jqXHR.responseJSON.errors, textStatus);
     });
 
 });

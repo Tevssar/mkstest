@@ -10,7 +10,7 @@
                         <div class="col-4 align-content-center">
                                 <div class="listing">
                                         <a class="listing__image-wrapper" href="articles/{{$article->id}}">
-                                                <img class="b-lazy" src="/img/{{ $article->cover }}.png" width="224" height="304">
+                                                <img class="b-lazy" src="/img/{{ $article->cover }}-100.png" width="150" >
                                         </a>
                                         <div class="article-tags p-2">
                                             @foreach ($article->tags as $tag)

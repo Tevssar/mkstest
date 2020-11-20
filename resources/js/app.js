@@ -1,2 +1,2 @@
 require('./bootstrap');
-require('./comment');
+require('./articles');
