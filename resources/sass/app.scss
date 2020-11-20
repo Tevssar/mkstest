@@ -1,8 +1,40 @@
 // Fonts
 @import url('https://fonts.googleapis.com/css?family=Nunito');
 
+@import '~@fortawesome/fontawesome-free/scss/regular';
+@import '~@fortawesome/fontawesome-free/scss/solid';
+@import '~@fortawesome/fontawesome-free/scss/fontawesome';
+
 // Variables
 @import 'variables';
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
+
+.article-text {
+    word-break: break-all;
+}
+.article-tags {
+
+}
+
+.disabled{
+    background-color: rgba(200, 200, 200, 0.5);
+}
+.sucsess form{
+    display: none;
+}
+.alert-success{
+    display: none;
+}
+.sucsess .alert-success{
+    display: block;
+}
+
+.hide {
+    display: none !important;
+}
+
+.article-image-wrapper {
+    min-width: 250px;
+}

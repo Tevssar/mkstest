@@ -14,10 +14,9 @@ class CreateCountersTable extends Migration
     public function up()
     {
         Schema::create('counters', function (Blueprint $table) {
-            $table->id();
-            $table->integer('vievs');
-            $table->integer('likes');
             $table->integer('articles_id');
+            $table->integer('views')->default(0);
+            $table->integer('likes')->default(0);
             $table->softDeletes();
             $table->timestamps();
         });

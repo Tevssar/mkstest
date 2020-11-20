@@ -4,7 +4,7 @@
 
 @section('content')
 
-<div class="container">
+<div class="container justify-content-md-center">
     <div class="row">
         @foreach ($articles as $article)
                         <div class="col-4 align-content-center">
@@ -21,6 +21,12 @@
 
                         </div>
         @endforeach
+
+    </div>
+    <div class="row justify-content-md-center p-2">
+        <div>
+            {{ $articles->links() }}
+        </div>
     </div>
 
 </div>

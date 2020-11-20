@@ -17,7 +17,6 @@ class CreateArticlesTable extends Migration
             $table->id();
             $table->string('cover');
             $table->text('text');
-            $table->string('tags');
             $table->softDeletes();
             $table->timestamps();
         });

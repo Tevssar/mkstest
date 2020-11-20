@@ -22,8 +22,8 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::group(['prefix' => 'v01', 'middleware' => 'api'], function () {
 
-        Route::put('/like/{article}', [CountersController::class, 'incrementLike']);
-        Route::put('/viev/{article}', [CountersController::class, 'incrementViev']);
-        Route::post('/comment/{article}', [CommentsController::class, 'store']);
+        Route::post('/like/{article}', [CountersController::class, 'incrementLike']);
+        Route::post('/viev/{article}', [CountersController::class, 'incrementViev']);
+        Route::post('/comment', [CommentsController::class, 'store']);
 
 });
